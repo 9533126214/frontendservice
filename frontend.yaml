@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}
+          image: frontendimgnag
           ports:
           - containerPort: 8080
           readinessProbe:
