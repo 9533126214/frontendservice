@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     PROJECT = "useful-cathode-334010"
-    APP_NAME = "reddy"
+    APP_NAME = "frontend"
     FE_SVC_NAME = "${APP_NAME}-frontend"
     CLUSTER = "cluster-1"
     CLUSTER_ZONE = "us-central1-c"
