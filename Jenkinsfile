@@ -65,7 +65,7 @@ spec:
           sh "gcloud auth list"
 
           sh "gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project useful-cathode-334010"
-          sh "kubectl apply -f service.yaml"
+          sh "kubectl apply -f frontend.yaml"
         }
       }
     }
