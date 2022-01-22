@@ -1,10 +1,10 @@
 pipeline {
 
   environment {
-    PROJECT = "augmented-ward-329505"
+    PROJECT = "useful-cathode-334010"
     APP_NAME = "reddy"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "goutham"
+    CLUSTER = "cluster-1"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
@@ -12,7 +12,7 @@ pipeline {
 
   agent {
     kubernetes {
-      label 'sample-app'
+      inheritFrom 'sample-app'
       defaultContainer 'jnlp'
       yaml """
 apiVersion: v1
