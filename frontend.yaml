@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: https://github.com/9533126214/frontendservice.git
+          image: gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}
           ports:
           - containerPort: 8080
           readinessProbe:
