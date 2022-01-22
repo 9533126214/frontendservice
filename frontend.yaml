@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: frontend
+          image: https://github.com/9533126214/frontendservice.git
           ports:
           - containerPort: 8080
           readinessProbe:
