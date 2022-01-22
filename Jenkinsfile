@@ -65,6 +65,7 @@ spec:
           sh "gcloud auth list"
 
           sh "gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project useful-cathode-334010"
+          sh("sed -i.bak 's#frontendimgnag#${IMAGE_TAG}#' *.yaml")
           sh "kubectl apply -f frontend.yaml"
         }
       }
