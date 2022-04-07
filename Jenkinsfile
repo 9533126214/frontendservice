@@ -1,11 +1,11 @@
 pipeline {
 
   environment {
-    PROJECT = "useful-cathode-334010"
+    PROJECT = "indigo-history-337312"
     APP_NAME = "frontend"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "cluster-2"
-    CLUSTER_ZONE = "us-central1-c"
+    CLUSTER = "way2die"
+    CLUSTER_ZONE = "us-east4-b"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
   }
@@ -64,7 +64,7 @@ spec:
         container('kubectl') {
           sh "gcloud auth list"
 
-          sh "gcloud container clusters get-credentials cluster-2 --zone us-central1-c --project useful-cathode-334010"
+          sh "gcloud container clusters get-credentials way2die --zone us-east4-b --project indigo-history-337312"
           sh("sed -i.bak 's#frontendimgnag#${IMAGE_TAG}#' *.yaml")
           sh "kubectl apply -f frontend.yaml"
         }
