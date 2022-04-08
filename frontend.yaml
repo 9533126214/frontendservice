@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: frontendimgnag
+          image: gcr.io/indigo-history-337312/frontend:latest
           ports:
           - containerPort: 8080
           readinessProbe:
