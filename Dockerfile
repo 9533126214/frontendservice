@@ -1,7 +1,7 @@
 FROM golang:1.14-alpine as builder
 
 ENV PROJECT github.com/GoogleCloudPlatform/microservices-demo/src/frontend
-WORKDIR /go/src/$PROJECT
+WORKDIR /go/src/srinag
 
 # restore dependencies
 COPY . .
