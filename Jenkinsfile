@@ -64,8 +64,7 @@ spec:
         container('kubectl') {
           sh "gcloud auth list"
 
-          sh "gcloud container clusters get-credentials way2die --zone us-east4-b --project indigo-history-337312"
-          sh("sed -i.bak 's#frontendimgnag#${IMAGE_TAG}#' *.yaml")
+          sh "gcloud container clusters get-credentials hipstar --zone us-central1-c --project srinag"
           sh "kubectl apply -f frontend.yaml"
         }
       }
