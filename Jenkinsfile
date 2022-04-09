@@ -1,12 +1,12 @@
 pipeline {
 
   environment {
-    PROJECT = "indigo-history-337312"
+    PROJECT = "srinag"
     APP_NAME = "frontend"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "way2die"
-    CLUSTER_ZONE = "us-east4-b"
-    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}"
+    CLUSTER = "hipstar"
+    CLUSTER_ZONE = "us-central1-c"
+    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}"
     JENKINS_CRED = "${PROJECT}"
   }
 
